@@ -1,8 +1,8 @@
-# Campus Bazar – Website Prototype (Light Orange Theme)
+# Campus Bazar – Web Prototype
 
 **El Senor Production**
 
-A high-fidelity interactive HTML/CSS prototype of the Campus Bazar e-commerce platform.
+An interactive HTML/CSS prototype of the Campus Bazar e-commerce platform.
 
 ## How to View
 
