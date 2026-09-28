@@ -27,7 +27,7 @@ An interactive HTML/CSS prototype of the Campus Bazar e-commerce platform.
 
 ## Design System
 
-- **Primary**: `#FF8C42` (Light Orange)
+- **Primary**: `#FF8C42`
 - **Background**: `#FFF8F0`
 - **Soft Orange**: `#FFE4C4`
 - **Typography**: Inter
