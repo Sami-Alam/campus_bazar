@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Campus Bazar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">📚</div> Campus Bazar
+      </a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search books, notes, gadgets..." />
+      </div>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="location.href='wishlist.html'">❤️ <span class="badge">3</span></button>
+        <button class="nav-icon-btn" onclick="location.href='cart.html'">🛒 <span class="badge">2</span></button>
+        <a href="account.html" class="btn btn-outline btn-sm">My Account</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top:32px;padding-bottom:60px;">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Shop</div>
+    <h1 class="page-title">All Products</h1>
+
+    <div class="shop-layout">
+      <!-- Filters -->
+      <aside class="filters">
+        <h3>Filters</h3>
+
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label class="filter-option"><input type="checkbox" checked /> Used Books</label>
+          <label class="filter-option"><input type="checkbox" /> Notes & Materials</label>
+          <label class="filter-option"><input type="checkbox" /> Electronics</label>
+          <label class="filter-option"><input type="checkbox" /> Stationery</label>
+          <label class="filter-option"><input type="checkbox" /> Printing</label>
+          <label class="filter-option"><input type="checkbox" /> Hostel Items</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Department / Course</h4>
+          <label class="filter-option"><input type="checkbox" /> CSE</label>
+          <label class="filter-option"><input type="checkbox" /> EEE</label>
+          <label class="filter-option"><input type="checkbox" /> BBA</label>
+          <label class="filter-option"><input type="checkbox" /> Civil</label>
+          <label class="filter-option"><input type="checkbox" /> Pharmacy</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Price Range</h4>
+          <label class="filter-option"><input type="radio" name="price" /> Under ৳200</label>
+          <label class="filter-option"><input type="radio" name="price" /> ৳200 – ৳500</label>
+          <label class="filter-option"><input type="radio" name="price" checked /> ৳500 – ৳1500</label>
+          <label class="filter-option"><input type="radio" name="price" /> Above ৳1500</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Condition</h4>
+          <label class="filter-option"><input type="checkbox" checked /> Like New</label>
+          <label class="filter-option"><input type="checkbox" /> Good</label>
+          <label class="filter-option"><input type="checkbox" /> Acceptable</label>
+        </div>
+
+        <button class="btn btn-primary btn-block" style="margin-top:10px;">Apply Filters</button>
+      </aside>
+
+      <!-- Products -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;">
+          <span style="color:var(--text-secondary);">Showing 12 of 86 products</span>
+          <select style="padding:8px 14px;border:1.5px solid var(--border);border-radius:10px;background:white;">
+            <option>Sort: Popular</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img"><span class="product-badge">Deal</span><button class="wishlist-btn">🤍</button>📘</div>
+            <div class="product-body">
+              <div class="product-category">Used Books · CSE</div>
+              <h3 class="product-title">Data Structures & Algorithms – Cormen</h3>
+              <div class="rating">⭐ 4.9 (28)</div>
+              <div class="product-meta">
+                <div class="product-price">৳850 <span>৳1200</span></div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img"><button class="wishlist-btn">🤍</button>💻</div>
+            <div class="product-body">
+              <div class="product-category">Electronics</div>
+              <h3 class="product-title">Casio fx-991ES Plus</h3>
+              <div class="rating">⭐ 4.7 (56)</div>
+              <div class="product-meta">
+                <div class="product-price">৳1450</div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img"><span class="product-badge">Notes</span><button class="wishlist-btn">🤍</button>📝</div>
+            <div class="product-body">
+              <div class="product-category">Notes · EEE</div>
+              <h3 class="product-title">Circuit Theory Notes (Handwritten)</h3>
+              <div class="rating">⭐ 4.8 (19)</div>
+              <div class="product-meta">
+                <div class="product-price">৳180</div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img"><button class="wishlist-btn">🤍</button>🖨️</div>
+            <div class="product-body">
+              <div class="product-category">Printing</div>
+              <h3 class="product-title">Thesis Binding + Color Print</h3>
+              <div class="rating">⭐ 4.6 (42)</div>
+              <div class="product-meta">
+                <div class="product-price">৳350</div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img"><button class="wishlist-btn">🤍</button>🎒</div>
+            <div class="product-body">
+              <div class="product-category">Essentials</div>
+              <h3 class="product-title">Laptop Backpack (Water Resistant)</h3>
+              <div class="rating">⭐ 4.5 (33)</div>
+              <div class="product-meta">
+                <div class="product-price">৳890</div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img"><button class="wishlist-btn">🤍</button>📕</div>
+            <div class="product-body">
+              <div class="product-category">Used Books · BBA</div>
+              <h3 class="product-title">Principles of Marketing – Kotler</h3>
+              <div class="rating">⭐ 4.4 (15)</div>
+              <div class="product-meta">
+                <div class="product-price">৳520</div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">© 2026 Campus Bazar · El Senor Production</div>
+    </div>
+  </footer>
+</body>
+</html>

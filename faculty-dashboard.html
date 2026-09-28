@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Dashboard – Campus Bazar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #E8F5E9;
+      color: #2E7D32;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .dash-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .qstat {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .qstat .label { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
+    .qstat .num { font-size: 1.6rem; font-weight: 700; }
+    .request-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+    .request-card h4 { margin-bottom: 6px; }
+    .priority-high { background: #FFEBEE; color: #C62828; font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 12px; }
+    .priority-normal { background: #E3F2FD; color: #1565C0; font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 12px; }
+    @media (max-width: 900px) {
+      .quick-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><div class="logo-icon">📚</div> Campus Bazar</a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search academic materials, office supplies..." />
+      </div>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="location.href='cart.html'">🛒 <span class="badge">1</span></button>
+        <span class="role-badge">👨‍🏫 Faculty</span>
+        <a href="faculty-dashboard.html" class="btn btn-primary btn-sm">Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="padding: 32px 0 60px;">
+    <div class="dash-header">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Faculty Dashboard</div>
+        <h1 class="page-title" style="margin-bottom:4px;">Welcome, Dr. Ayesha Rahman</h1>
+        <p style="color:var(--text-secondary);">Department of Computer Science & Engineering · Faculty ID: FAC-2018-042</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="shop.html?cat=faculty" class="btn btn-outline btn-sm">Faculty Supplies</a>
+        <button class="btn btn-primary btn-sm">+ New Material Request</button>
+      </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="quick-stats">
+      <div class="qstat">
+        <div class="label">Open Requests</div>
+        <div class="num">3</div>
+      </div>
+      <div class="qstat">
+        <div class="label">Approved This Month</div>
+        <div class="num">5</div>
+      </div>
+      <div class="qstat">
+        <div class="label">Faculty Discount Used</div>
+        <div class="num">৳1,240</div>
+      </div>
+      <div class="qstat">
+        <div class="label">Pending Pickup</div>
+        <div class="num">2</div>
+      </div>
+    </div>
+
+    <div class="account-layout">
+      <!-- Sidebar -->
+      <aside class="account-nav">
+        <a href="faculty-dashboard.html" class="active">📊 Overview</a>
+        <a href="#">📋 Material Requests</a>
+        <a href="#">📦 My Orders</a>
+        <a href="#">🖨️ Printing & Binding</a>
+        <a href="#">📚 Course Materials</a>
+        <a href="#">🎫 Faculty Coupons</a>
+        <a href="#">📍 Office Pickup</a>
+        <a href="seller-dashboard.html">💰 Seller Mode</a>
+        <a href="#">👤 Profile</a>
+      </aside>
+
+      <div>
+        <!-- Material Requests -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+          <h2 style="font-size:1.25rem;">Material Requests</h2>
+          <button class="btn btn-primary btn-sm">+ New Request</button>
+        </div>
+
+        <div class="request-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+            <div>
+              <h4>Whiteboard Markers & Erasers (Pack of 12)</h4>
+              <div style="font-size:0.9rem;color:var(--text-secondary);">Requested 22 Sep · Department Office</div>
+            </div>
+            <span class="priority-high">High Priority</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="order-status status-pending">Pending Approval</span>
+            <span style="font-size:0.9rem;color:var(--text-secondary);">Qty: 2 packs · Est. ৳480</span>
+          </div>
+        </div>
+
+        <div class="request-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+            <div>
+              <h4>A4 Paper Ream (80 GSM) – 5 Reams</h4>
+              <div style="font-size:0.9rem;color:var(--text-secondary);">Requested 20 Sep · For Midterm Papers</div>
+            </div>
+            <span class="priority-normal">Normal</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="order-status status-paid">Approved</span>
+            <span style="font-size:0.9rem;color:var(--text-secondary);">Ready for office pickup</span>
+          </div>
+        </div>
+
+        <div class="request-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+            <div>
+              <h4>Laser Toner Cartridge (HP 85A)</h4>
+              <div style="font-size:0.9rem;color:var(--text-secondary);">Requested 18 Sep · Lab Printer</div>
+            </div>
+            <span class="priority-normal">Normal</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="order-status status-paid">Completed</span>
+            <span style="font-size:0.9rem;color:var(--text-secondary);">Picked up 21 Sep</span>
+          </div>
+        </div>
+
+        <!-- Faculty Exclusive -->
+        <h2 style="font-size:1.25rem;margin:28px 0 16px;">Faculty Exclusive Offers</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);border-radius:14px;padding:22px;">
+            <div style="font-size:0.85rem;font-weight:600;color:#2E7D32;margin-bottom:6px;">FACULTY15</div>
+            <h3 style="margin-bottom:6px;">15% off Office Supplies</h3>
+            <p style="font-size:0.9rem;color:#1B5E20;margin-bottom:12px;">Valid until 30 Oct · Max ৳500 discount</p>
+            <button class="btn btn-sm" style="background:#2E7D32;color:white;">Copy Code</button>
+          </div>
+          <div style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2);border-radius:14px;padding:22px;">
+            <div style="font-size:0.85rem;font-weight:600;color:#E65100;margin-bottom:6px;">PRINT-FAC</div>
+            <h3 style="margin-bottom:6px;">Free Binding on Thesis Prints</h3>
+            <p style="font-size:0.9rem;color:#BF360C;margin-bottom:12px;">For supervised student theses</p>
+            <button class="btn btn-sm" style="background:#E65100;color:white;">Copy Code</button>
+          </div>
+        </div>
+
+        <!-- Request Analytics -->
+        <h2 style="font-size:1.25rem;margin:28px 0 16px;">Request Analytics</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:8px;">
+          <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:22px;">
+            <h3 style="font-size:1rem;margin-bottom:12px;">Requests by Status</h3>
+            <canvas id="facultyStatusChart" height="150"></canvas>
+          </div>
+          <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:22px;">
+            <h3 style="font-size:1rem;margin-bottom:12px;">Monthly Request Volume</h3>
+            <canvas id="facultyVolumeChart" height="150"></canvas>
+          </div>
+        </div>
+
+        <!-- Recommended Supplies -->
+        <h2 style="font-size:1.25rem;margin:28px 0 16px;">Recommended for Faculty</h2>
+        <div class="products-grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));">
+          <div class="product-card">
+            <div class="product-img" style="height:140px;">🖊️</div>
+            <div class="product-body">
+              <div class="product-category">Office Supplies</div>
+              <h3 class="product-title" style="font-size:0.95rem;">Whiteboard Marker Set (12 pcs)</h3>
+              <div class="product-meta">
+                <div class="product-price" style="font-size:1.05rem;">৳240</div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img" style="height:140px;">📄</div>
+            <div class="product-body">
+              <div class="product-category">Stationery</div>
+              <h3 class="product-title" style="font-size:0.95rem;">A4 Paper Ream 80GSM</h3>
+              <div class="product-meta">
+                <div class="product-price" style="font-size:1.05rem;">৳320</div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img" style="height:140px;">🖨️</div>
+            <div class="product-body">
+              <div class="product-category">Printing</div>
+              <h3 class="product-title" style="font-size:0.95rem;">HP 85A Toner Cartridge</h3>
+              <div class="product-meta">
+                <div class="product-price" style="font-size:1.05rem;">৳1850</div>
+                <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">© 2026 Campus Bazar · Faculty Dashboard</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script>
+    const orange = '#FF8C42';
+    const softOrange = '#FFB347';
+
+    new Chart(document.getElementById('facultyStatusChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Completed', 'Approved', 'Pending'],
+        datasets: [{
+          data: [5, 2, 3],
+          backgroundColor: ['#4CAF50', softOrange, orange],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 10 } } }
+      }
+    });
+
+    new Chart(document.getElementById('facultyVolumeChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Jun', 'Jul', 'Aug', 'Sep'],
+        datasets: [{
+          label: 'Requests',
+          data: [2, 4, 3, 5],
+          backgroundColor: orange,
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, ticks: { stepSize: 1 }, grid: { color: '#F0E6D8' } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

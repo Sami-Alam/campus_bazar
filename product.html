@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Detail – Campus Bazar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><div class="logo-icon">📚</div> Campus Bazar</a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="location.href='wishlist.html'">❤️ <span class="badge">3</span></button>
+        <button class="nav-icon-btn" onclick="location.href='cart.html'">🛒 <span class="badge">2</span></button>
+        <a href="account.html" class="btn btn-outline btn-sm">My Account</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumb" style="padding-top:28px;"><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Data Structures & Algorithms</div>
+
+    <div class="product-detail">
+      <div class="gallery">
+        <div class="main-image">📘</div>
+        <div class="thumbs">
+          <div class="thumb active">📘</div>
+          <div class="thumb">📄</div>
+          <div class="thumb">🏷️</div>
+        </div>
+      </div>
+
+      <div class="detail-info">
+        <div style="font-size:0.85rem;color:var(--primary);font-weight:600;margin-bottom:6px;">USED BOOKS · CSE</div>
+        <h1>Data Structures & Algorithms – Cormen (3rd Edition)</h1>
+        <div class="detail-meta">
+          <span>⭐ 4.9 (28 reviews)</span>
+          <span>·</span>
+          <span>Sold by: StudentSeller_42</span>
+          <span>·</span>
+          <span>Condition: Like New</span>
+        </div>
+
+        <div class="detail-price">৳850 <span>৳1200</span></div>
+
+        <p style="color:var(--text-secondary);margin-bottom:24px;line-height:1.6;">
+          Original hardcover, minimal highlighting. Perfect for CSE 2nd & 3rd year. Includes all chapters and exercises. Campus pickup available at Library & Engineering Building.
+        </p>
+
+        <div class="size-selector">
+          <h4>Condition</h4>
+          <div class="size-options">
+            <button class="size-btn active">Like New</button>
+            <button class="size-btn">Good</button>
+            <button class="size-btn">Fair</button>
+          </div>
+        </div>
+
+        <div class="qty-selector">
+          <h4>Quantity</h4>
+          <div class="qty-control">
+            <button>−</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <button class="btn btn-primary" style="flex:1;">🛒 Add to Cart</button>
+          <button class="btn btn-outline">❤️ Wishlist</button>
+        </div>
+
+        <div style="margin-top:28px;padding:16px;background:var(--soft-orange);border-radius:12px;font-size:0.95rem;">
+          📍 <strong>Campus Pickup:</strong> Library Gate · Engineering Building · Student Center
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div style="margin-top:20px;padding-bottom:60px;">
+      <div class="tabs">
+        <div class="tab active">Description</div>
+        <div class="tab">Features</div>
+        <div class="tab">Reviews (28)</div>
+      </div>
+      <div style="max-width:700px;line-height:1.7;color:var(--text-secondary);">
+        <p>This is the classic CLRS textbook used in most CSE departments. The book is in excellent condition with only light pencil marks that can be erased. All pages intact, no missing sections.</p>
+        <br>
+        <p><strong>Includes:</strong></p>
+        <ul style="margin-left:20px;margin-top:8px;">
+          <li>All 35 chapters</li>
+          <li>Exercise solutions hints</li>
+          <li>Original dust jacket</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">© 2026 Campus Bazar</div>
+    </div>
+  </footer>
+</body>
+</html>

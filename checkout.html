@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout – Campus Bazar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><div class="logo-icon">📚</div> Campus Bazar</a>
+      <div class="nav-actions">
+        <a href="cart.html" class="btn btn-outline btn-sm">← Back to Cart</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="padding:40px 0 60px;">
+    <h1 class="page-title">Checkout</h1>
+
+    <div class="cart-layout">
+      <div>
+        <!-- Pickup Point -->
+        <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;">
+          <h3 style="margin-bottom:16px;">📍 Campus Pickup Point</h3>
+          <div style="display:grid;gap:10px;">
+            <label class="filter-option" style="padding:12px;border:1.5px solid var(--primary);border-radius:10px;background:var(--soft-orange);">
+              <input type="radio" name="pickup" checked /> Library Gate (Main Campus)
+            </label>
+            <label class="filter-option" style="padding:12px;border:1.5px solid var(--border);border-radius:10px;">
+              <input type="radio" name="pickup" /> Engineering Building Entrance
+            </label>
+            <label class="filter-option" style="padding:12px;border:1.5px solid var(--border);border-radius:10px;">
+              <input type="radio" name="pickup" /> Student Center
+            </label>
+            <label class="filter-option" style="padding:12px;border:1.5px solid var(--border);border-radius:10px;">
+              <input type="radio" name="pickup" /> Girls' Hostel Gate
+            </label>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;">
+          <h3 style="margin-bottom:16px;">Contact Information</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div>
+              <label style="font-size:0.85rem;color:var(--text-secondary);">Full Name</label>
+              <input type="text" value="Rahim Ahmed" style="width:100%;padding:11px;border:1.5px solid var(--border);border-radius:8px;margin-top:4px;" />
+            </div>
+            <div>
+              <label style="font-size:0.85rem;color:var(--text-secondary);">Phone</label>
+              <input type="text" value="01712-345678" style="width:100%;padding:11px;border:1.5px solid var(--border);border-radius:8px;margin-top:4px;" />
+            </div>
+            <div style="grid-column:1/-1;">
+              <label style="font-size:0.85rem;color:var(--text-secondary);">Student ID / Email</label>
+              <input type="text" value="rahim@student.edu" style="width:100%;padding:11px;border:1.5px solid var(--border);border-radius:8px;margin-top:4px;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Method -->
+        <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:24px;">
+          <h3 style="margin-bottom:16px;">Payment Method</h3>
+          <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:14px;">After placing the order you will verify payment from your account section.</p>
+          <label class="filter-option" style="padding:12px;border:1.5px solid var(--primary);border-radius:10px;background:var(--soft-orange);margin-bottom:8px;">
+            <input type="radio" name="pay" checked /> bKash / Nagad (Manual Verification)
+          </label>
+          <label class="filter-option" style="padding:12px;border:1.5px solid var(--border);border-radius:10px;">
+            <input type="radio" name="pay" /> Bank Transfer
+          </label>
+        </div>
+      </div>
+
+      <div class="summary-card">
+        <h3>Order Summary</h3>
+        <div style="margin-bottom:16px;">
+          <div style="display:flex;justify-content:space-between;font-size:0.95rem;margin-bottom:8px;">
+            <span>DSA Cormen × 1</span><span>৳850</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:0.95rem;">
+            <span>Casio Calculator × 1</span><span>৳1450</span>
+          </div>
+        </div>
+        <div class="summary-row"><span>Subtotal</span><span>৳2300</span></div>
+        <div class="summary-row"><span>Pickup</span><span style="color:var(--success);">Free</span></div>
+        <div class="coupon-input">
+          <input type="text" placeholder="Coupon code" value="STUDENT10" />
+          <button class="btn btn-outline btn-sm">Apply</button>
+        </div>
+        <div class="summary-row" style="color:var(--success);"><span>Discount (STUDENT10)</span><span>−৳230</span></div>
+        <div class="summary-row total"><span>Total</span><span>৳2070</span></div>
+        <button class="btn btn-primary btn-block" style="margin-top:18px;">Place Order</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

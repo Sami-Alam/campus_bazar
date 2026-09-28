@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Bazar – Buy & Sell on Campus</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">📚</div>
+        Campus Bazar
+      </a>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search books, notes, gadgets, stationery..." />
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" title="Wishlist" onclick="location.href='wishlist.html'">
+          ❤️ <span class="badge">3</span>
+        </button>
+        <button class="nav-icon-btn" title="Cart" onclick="location.href='cart.html'">
+          🛒 <span class="badge">2</span>
+        </button>
+        <a href="student-dashboard.html" class="btn btn-outline btn-sm">Student</a>
+        <a href="faculty-dashboard.html" class="btn btn-outline btn-sm">Faculty</a>
+        <a href="seller-dashboard.html" class="btn btn-outline btn-sm">Seller</a>
+        <a href="admin.html" class="btn btn-primary btn-sm">Admin</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Your Campus <span>Marketplace</span></h1>
+        <p>Buy, sell & exchange books, notes, gadgets and student essentials — all within your campus community. Fast pickup points & student discounts.</p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn btn-primary">Browse Products</a>
+          <a href="shop.html?cat=books" class="btn btn-outline">Used Book Exchange</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div style="height:180px;background:linear-gradient(135deg,#FF8C42,#FFB347);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:4rem;">📖</div>
+          <div style="margin-top:14px;">
+            <div style="font-size:0.8rem;color:#FF8C42;font-weight:600;">FEATURED</div>
+            <h3 style="margin:4px 0 8px;">Organic Chemistry – 3rd Ed</h3>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-weight:700;font-size:1.2rem;">৳450</span>
+              <span style="font-size:0.85rem;color:#6B6560;">⭐ 4.8 · CSE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CATEGORIES ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Shop by Category</h2>
+        <a href="shop.html" class="section-link">View all →</a>
+      </div>
+      <div class="categories-grid">
+        <a href="shop.html?cat=books" class="category-card">
+          <div class="category-icon">📘</div>
+          <h3>Used Books</h3>
+        </a>
+        <a href="shop.html?cat=notes" class="category-card">
+          <div class="category-icon">📝</div>
+          <h3>Notes & Materials</h3>
+        </a>
+        <a href="shop.html?cat=electronics" class="category-card">
+          <div class="category-icon">💻</div>
+          <h3>Electronics</h3>
+        </a>
+        <a href="shop.html?cat=stationery" class="category-card">
+          <div class="category-icon">✏️</div>
+          <h3>Stationery</h3>
+        </a>
+        <a href="shop.html?cat=printing" class="category-card">
+          <div class="category-icon">🖨️</div>
+          <h3>Printing</h3>
+        </a>
+        <a href="shop.html?cat=hostel" class="category-card">
+          <div class="category-icon">🛏️</div>
+          <h3>Hostel Items</h3>
+        </a>
+        <a href="shop.html?cat=faculty" class="category-card">
+          <div class="category-icon">👨‍🏫</div>
+          <h3>Faculty Supplies</h3>
+        </a>
+        <a href="shop.html?cat=essentials" class="category-card">
+          <div class="category-icon">🎒</div>
+          <h3>Student Essentials</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED PRODUCTS ========== -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Popular Right Now</h2>
+        <a href="shop.html" class="section-link">See more →</a>
+      </div>
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-img">
+            <span class="product-badge">Student Deal</span>
+            <button class="wishlist-btn">🤍</button>
+            📘
+          </div>
+          <div class="product-body">
+            <div class="product-category">Used Books · CSE</div>
+            <h3 class="product-title">Data Structures & Algorithms – Cormen</h3>
+            <div class="rating">⭐ 4.9 (28)</div>
+            <div class="product-meta">
+              <div class="product-price">৳850 <span>৳1200</span></div>
+              <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-img">
+            <button class="wishlist-btn">🤍</button>
+            💻
+          </div>
+          <div class="product-body">
+            <div class="product-category">Electronics</div>
+            <h3 class="product-title">Casio fx-991ES Plus Calculator</h3>
+            <div class="rating">⭐ 4.7 (56)</div>
+            <div class="product-meta">
+              <div class="product-price">৳1450</div>
+              <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-img">
+            <span class="product-badge">Notes</span>
+            <button class="wishlist-btn">🤍</button>
+            📝
+          </div>
+          <div class="product-body">
+            <div class="product-category">Notes · EEE 3rd Sem</div>
+            <h3 class="product-title">Complete Circuit Theory Notes (Handwritten)</h3>
+            <div class="rating">⭐ 4.8 (19)</div>
+            <div class="product-meta">
+              <div class="product-price">৳180</div>
+              <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-img">
+            <button class="wishlist-btn">🤍</button>
+            🖨️
+          </div>
+          <div class="product-body">
+            <div class="product-category">Printing Service</div>
+            <h3 class="product-title">Thesis Binding + Color Print (A4)</h3>
+            <div class="rating">⭐ 4.6 (42)</div>
+            <div class="product-meta">
+              <div class="product-price">৳350</div>
+              <a href="product.html" class="btn btn-primary btn-sm">Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CAMPUS HIGHLIGHTS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Campus Bazar?</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;">
+        <div style="background:white;border-radius:14px;padding:28px;border:1.5px solid #F0E6D8;text-align:center;">
+          <div style="font-size:2.4rem;margin-bottom:12px;">📍</div>
+          <h3 style="margin-bottom:8px;">Campus Pickup</h3>
+          <p style="color:#6B6560;font-size:0.95rem;">Choose convenient pickup points around campus.</p>
+        </div>
+        <div style="background:white;border-radius:14px;padding:28px;border:1.5px solid #F0E6D8;text-align:center;">
+          <div style="font-size:2.4rem;margin-bottom:12px;">🎫</div>
+          <h3 style="margin-bottom:8px;">Student Coupons</h3>
+          <p style="color:#6B6560;font-size:0.95rem;">Exclusive discounts for students & faculty.</p>
+        </div>
+        <div style="background:white;border-radius:14px;padding:28px;border:1.5px solid #F0E6D8;text-align:center;">
+          <div style="font-size:2.4rem;margin-bottom:12px;">🔄</div>
+          <h3 style="margin-bottom:8px;">Book Exchange</h3>
+          <p style="color:#6B6560;font-size:0.95rem;">Sell or swap used academic books easily.</p>
+        </div>
+        <div style="background:white;border-radius:14px;padding:28px;border:1.5px solid #F0E6D8;text-align:center;">
+          <div style="font-size:2.4rem;margin-bottom:12px;">⭐</div>
+          <h3 style="margin-bottom:8px;">Reviews & Ratings</h3>
+          <p style="color:#6B6560;font-size:0.95rem;">Make better decisions with real student feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="color:white;margin-bottom:16px;">
+            <div class="logo-icon">📚</div> Campus Bazar
+          </div>
+          <p style="max-width:280px;line-height:1.6;">The trusted marketplace for students and faculty. Buy, sell and exchange academic essentials within your campus community.</p>
+        </div>
+        <div>
+          <h4>Marketplace</h4>
+          <a href="shop.html">All Products</a>
+          <a href="shop.html?cat=books">Used Books</a>
+          <a href="shop.html?cat=notes">Notes</a>
+          <a href="shop.html?cat=electronics">Electronics</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Pickup Points</a>
+          <a href="#">Contact Us</a>
+          <a href="#">About Us</a>
+        </div>
+        <div>
+          <h4>Dashboards</h4>
+          <a href="student-dashboard.html">Student Dashboard</a>
+          <a href="faculty-dashboard.html">Faculty Dashboard</a>
+          <a href="seller-dashboard.html">Seller Dashboard</a>
+          <a href="admin.html">Admin Panel</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Campus Bazar · El Senor Production · Designed for HCI
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

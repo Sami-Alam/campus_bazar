@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist – Campus Bazar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><div class="logo-icon">📚</div> Campus Bazar</a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div class="nav-actions">
+        <button class="nav-icon-btn">❤️ <span class="badge">3</span></button>
+        <button class="nav-icon-btn" onclick="location.href='cart.html'">🛒 <span class="badge">2</span></button>
+        <a href="account.html" class="btn btn-outline btn-sm">My Account</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top:32px;padding-bottom:60px;">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Wishlist</div>
+    <h1 class="page-title">My Wishlist (3)</h1>
+
+    <div class="products-grid" style="margin-top:28px;">
+      <div class="product-card">
+        <div class="product-img"><button class="wishlist-btn">❤️</button>📘</div>
+        <div class="product-body">
+          <div class="product-category">Used Books · CSE</div>
+          <h3 class="product-title">Operating System Concepts – Silberschatz</h3>
+          <div class="product-meta">
+            <div class="product-price">৳720</div>
+            <a href="product.html" class="btn btn-primary btn-sm">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><button class="wishlist-btn">❤️</button>📝</div>
+        <div class="product-body">
+          <div class="product-category">Notes · CSE</div>
+          <h3 class="product-title">Database Management Systems Full Notes</h3>
+          <div class="product-meta">
+            <div class="product-price">৳150</div>
+            <a href="product.html" class="btn btn-primary btn-sm">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><button class="wishlist-btn">❤️</button>💻</div>
+        <div class="product-body">
+          <div class="product-category">Electronics</div>
+          <h3 class="product-title">Wireless Mouse + Keyboard Combo</h3>
+          <div class="product-meta">
+            <div class="product-price">৳980</div>
+            <a href="product.html" class="btn btn-primary btn-sm">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">© 2026 Campus Bazar</div>
+    </div>
+  </footer>
+</body>
+</html>

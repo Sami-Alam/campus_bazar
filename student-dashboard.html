@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard – Campus Bazar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--soft-orange);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .dash-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .qstat {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .qstat .label { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
+    .qstat .num { font-size: 1.6rem; font-weight: 700; }
+    .activity-list { display: flex; flex-direction: column; gap: 12px; }
+    .activity-item {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .activity-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--soft-orange);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0;
+    }
+    @media (max-width: 900px) {
+      .quick-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><div class="logo-icon">📚</div> Campus Bazar</a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search books, notes, gadgets..." />
+      </div>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="location.href='wishlist.html'">❤️ <span class="badge">3</span></button>
+        <button class="nav-icon-btn" onclick="location.href='cart.html'">🛒 <span class="badge">2</span></button>
+        <span class="role-badge">🎓 Student</span>
+        <a href="student-dashboard.html" class="btn btn-primary btn-sm">Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="padding: 32px 0 60px;">
+    <div class="dash-header">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Student Dashboard</div>
+        <h1 class="page-title" style="margin-bottom:4px;">Hey, Rahim 👋</h1>
+        <p style="color:var(--text-secondary);">CSE · 3rd Year · Student ID: 2023-1-60-042</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="shop.html" class="btn btn-outline btn-sm">Browse Marketplace</a>
+        <a href="seller-dashboard.html" class="btn btn-primary btn-sm">Sell an Item</a>
+      </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="quick-stats">
+      <div class="qstat">
+        <div class="label">Active Orders</div>
+        <div class="num">2</div>
+      </div>
+      <div class="qstat">
+        <div class="label">Wishlist Items</div>
+        <div class="num">3</div>
+      </div>
+      <div class="qstat">
+        <div class="label">Saved Coupons</div>
+        <div class="num">4</div>
+      </div>
+      <div class="qstat">
+        <div class="label">Items Sold</div>
+        <div class="num">7</div>
+      </div>
+    </div>
+
+    <div class="account-layout">
+      <!-- Sidebar -->
+      <aside class="account-nav">
+        <a href="student-dashboard.html" class="active">📊 Overview</a>
+        <a href="account.html">📦 My Orders</a>
+        <a href="wishlist.html">❤️ Wishlist</a>
+        <a href="#">🎫 My Coupons</a>
+        <a href="#">📍 Pickup Points</a>
+        <a href="#">📝 My Notes Listings</a>
+        <a href="seller-dashboard.html">💰 Seller Mode</a>
+        <a href="#">👤 Profile & ID</a>
+        <a href="#">🔒 Password</a>
+      </aside>
+
+      <div>
+        <!-- Recent Orders -->
+        <h2 style="font-size:1.25rem;margin-bottom:16px;">Recent Orders</h2>
+        <div class="order-card">
+          <div class="order-header">
+            <div>
+              <strong>Order #CB-2026-0842</strong>
+              <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:4px;">24 Sep 2026 · Library Gate Pickup</div>
+            </div>
+            <span class="order-status status-unpaid">Unpaid – Verify</span>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;">
+            <div style="width:52px;height:52px;background:var(--soft-orange);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">📘</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;">Data Structures & Algorithms – Cormen</div>
+              <div style="font-size:0.9rem;color:var(--text-secondary);">Qty: 1 · Like New</div>
+            </div>
+            <div style="font-weight:700;">৳850</div>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:10px;">
+            <a href="account.html" class="btn btn-primary btn-sm">Verify Payment</a>
+            <button class="btn btn-outline btn-sm">Track</button>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-header">
+            <div>
+              <strong>Order #CB-2026-0791</strong>
+              <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:4px;">18 Sep 2026 · Engineering Building</div>
+            </div>
+            <span class="order-status status-paid">Paid · Ready for Pickup</span>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;">
+            <div style="width:52px;height:52px;background:var(--soft-orange);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">💻</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;">Casio fx-991ES Plus</div>
+              <div style="font-size:0.9rem;color:var(--text-secondary);">Qty: 1</div>
+            </div>
+            <div style="font-weight:700;">৳1450</div>
+          </div>
+        </div>
+
+        <!-- Recommended for your courses -->
+        <h2 style="font-size:1.25rem;margin:28px 0 16px;">Recommended for CSE 3rd Year</h2>
+        <div class="products-grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));">
+          <div class="product-card">
+            <div class="product-img" style="height:140px;">📘</div>
+            <div class="product-body">
+              <div class="product-category">CSE · 5th Sem</div>
+              <h3 class="product-title" style="font-size:0.95rem;">Operating Systems – Silberschatz</h3>
+              <div class="product-meta">
+                <div class="product-price" style="font-size:1.05rem;">৳720</div>
+                <a href="product.html" class="btn btn-primary btn-sm">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img" style="height:140px;">📝</div>
+            <div class="product-body">
+              <div class="product-category">Notes · CSE</div>
+              <h3 class="product-title" style="font-size:0.95rem;">DBMS Full Handwritten Notes</h3>
+              <div class="product-meta">
+                <div class="product-price" style="font-size:1.05rem;">৳150</div>
+                <a href="product.html" class="btn btn-primary btn-sm">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img" style="height:140px;">📕</div>
+            <div class="product-body">
+              <div class="product-category">CSE · Algorithms</div>
+              <h3 class="product-title" style="font-size:0.95rem;">Algorithm Design Manual</h3>
+              <div class="product-meta">
+                <div class="product-price" style="font-size:1.05rem;">৳680</div>
+                <a href="product.html" class="btn btn-primary btn-sm">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spending Analytics -->
+        <h2 style="font-size:1.25rem;margin:28px 0 16px;">My Spending</h2>
+        <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:20px;margin-bottom:8px;">
+          <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:22px;">
+            <h3 style="font-size:1rem;margin-bottom:12px;">Monthly Spending</h3>
+            <canvas id="studentSpendChart" height="160"></canvas>
+          </div>
+          <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:22px;">
+            <h3 style="font-size:1rem;margin-bottom:12px;">By Category</h3>
+            <canvas id="studentCategoryChart" height="160"></canvas>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <h2 style="font-size:1.25rem;margin:28px 0 16px;">Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon">❤️</div>
+            <div>
+              <div style="font-weight:600;">Added to wishlist</div>
+              <div style="font-size:0.9rem;color:var(--text-secondary);">Wireless Mouse + Keyboard Combo · 2 hours ago</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">🎫</div>
+            <div>
+              <div style="font-weight:600;">Coupon applied</div>
+              <div style="font-size:0.9rem;color:var(--text-secondary);">STUDENT10 saved ৳230 · Yesterday</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">📦</div>
+            <div>
+              <div style="font-weight:600;">Order placed</div>
+              <div style="font-size:0.9rem;color:var(--text-secondary);">Order #CB-0842 · 24 Sep</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">© 2026 Campus Bazar · Student Dashboard</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script>
+    const orange = '#FF8C42';
+    const softOrange = '#FFB347';
+    const lightOrange = '#FFE4C4';
+
+    new Chart(document.getElementById('studentSpendChart'), {
+      type: 'bar',
+      data: {
+        labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        datasets: [{
+          label: 'Spent (৳)',
+          data: [450, 820, 320, 1150, 2300],
+          backgroundColor: orange,
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, grid: { color: '#F0E6D8' } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('studentCategoryChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Books', 'Electronics', 'Notes', 'Other'],
+        datasets: [{
+          data: [48, 28, 15, 9],
+          backgroundColor: [orange, softOrange, '#FFD4A8', '#F0E6D8'],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 10 } } }
+      }
+    });
+  </script>
+</body>
+</html>
