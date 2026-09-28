@@ -70,21 +70,12 @@ A high-fidelity interactive HTML/CSS prototype of the Campus Bazar e-commerce pl
 - Recent orders table with status badges
 - Quick actions for Products, Coupons, Categories, Bundles
 
-## Recreating in Figma
-
-1. Create a new Figma file.
-2. Set up the color styles from the Design System above.
-3. Use Auto Layout + Components for Product Card, Navbar, Buttons, Order Card.
-4. Create frames for each page (Desktop 1440 px width recommended).
-5. Import the screenshots of these HTML pages as reference (or recreate from this prototype).
-
 ## Notes
 
 - This is a **static prototype** (no real backend).
 - All interactions are front-end only (links between pages).
-- Currency shown as ৳ (Bangladeshi Taka) – easy to change.
 - Fully responsive (works on mobile too).
 
 ---
 
-© 2026 Campus Bazar · Designed for HCI course / project demonstration.# campus_bazar
+© 2026 Campus Bazar .# campus_bazar
